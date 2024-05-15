@@ -1,0 +1,18 @@
+h1 {
+  color: red;
+}
+
+.gridContainer {
+  border: 1px solid black;
+  height: 500px;
+  width: 500px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.gridBox {
+  border: 1px solid black;
+}
+
+/*# sourceMappingURL=style.css.map */
