@@ -3,6 +3,9 @@ h1 {
 }
 
 .gridContainer {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9jKCQ3VI-HNOw08cm1w3t96Ydfhqfndmtww&s");
+  background-repeat: no-repeat;
+  background-size: cover;
   border: 1px solid black;
   height: 500px;
   width: 500px;
@@ -13,6 +16,18 @@ h1 {
 
 .gridBox {
   border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gridBox img {
+  object-fit: contain;
+  width: 50%;
+  overflow: hidden;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,23 +1,21 @@
 const gridBox = document.querySelectorAll('.gridBox');
 const points = document.querySelector('#points');
-
+const birdInBox = document.createElement('img');
 
 createRandomBox()
 function createRandomBox(){
     let randomInt = Math.floor(Math.random() * gridBox.length);
     setTimeout(()=>{
-        gridBox[randomInt].style.backgroundColor = "red";
-        gridBox[randomInt].addEventListener('click', getPoint)
+        gridBox[randomInt].children[0].classList.remove("d-none");
+        gridBox[randomInt].addEventListener('click', getPoint);
         setTimeout(()=>{
-            gridBox[randomInt].style.backgroundColor = "white";
-            gridBox[randomInt].removeEventListener('click', getPoint)
+            gridBox[randomInt].children[0].classList.add("d-none");
+            gridBox[randomInt].removeEventListener('click', getPoint);
             createRandomBox()
-        },500)
+        },600)
     },1000)
-    // console.log(randomInt)
 }
 
 function getPoint(){
     points.textContent = Number(points.textContent) +1;
-    // alert('You get 1 point')
 }
